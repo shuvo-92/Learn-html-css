@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html l
+ang="en" >
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>css-background</title>
+
+<style type="text/css" media="all">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:kalpurush;
+}
+
+html body {
+background-color:#f2f3fb;
+}
+
+@font-face{
+font-family:kalpurush;
+src:url(kalpurush.ttf);
+}
+
+p{
+font-size:14px;
+line-height:1.2rem;
+}
+
+
+section.text{
+width:96%;
+height:auto;
+margin:20px auto;
+padding:10px;
+border:1px solid whitesmoke;
+border-radius:8px;
+background-color:#fffbfe;
+box-shadow:0px 1px 4px rgba(2,2,2,0.2);
+
+}
+
+section.text:hover {
+background-color:#1c1b1f;
+color:#fffbfe;
+}
+
+li{
+font-size:14px;
+line-height:1.2rem;
+}
+
+div.example {
+width:98%;
+height:auto;
+margin:4px auto 12px;
+padding:10px;
+border:none;
+border-radius:12px;
+background-color:#fafbff;
+box-shadow:0px 1px 2px rgba(4,4,4,0.2);
+}
+
+span.highlight {
+padding:0px 4px;
+border-radius:4px;
+background-color:#f6fc6d;
+
+}
+
+
+div#examplex  {
+display:flex;
+gap:6px;
+overflow:scroll;
+}
+
+div.examplechild  {
+width:50%;
+height:auto;
+margin:0;
+padding:4px;
+border:1px solid silver;
+background-color:lightblue;
+border-radius:4px;
+}
+
+div#bodyyellow {
+background-color:yellow;
+}
+
+
+}
+div#repeat  {
+background-image:url("small-sunflower.png");
+}
+div#repeatx {
+      background-image: url("small-sunflower.png");
+      background-repeat: repeat-x;
+}
+div#repeaty {
+background-image: url("small-sunflower.png");
+      background-repeat: repeat-y;
+    }
+}
+
+
+</style>
+
+</head>
+<body>
+
+<section class="text" >
+<h4>সিএসএস ব্যাকগ্রাউন্ড</h4>
+<p>
+এলিমেন্ট গুলোর ব্যাকগ্রাউন্ড কালার বা ইমেজ দিয়ে ফিল দিয়ে থাকে, ক্লিপড বা রিসাইজ করা যায় এমন থাকে আরো অন্যান্য কাজ করা যায় ব্যাকগ্রাউন্ড নিয়ে।
+</p>
+<br>
+<p>
+সিএসএস ব্যাকগ্রাউন্ড প্রোপার্টি:
+
+<li><span class="highlight" >backgroun-color</span></li>
+<li><span class="highlight" >background-image</span></li>
+<li><span class="highlight" >backgroun-repeat</span></li>
+<li><span class="highlight" >backgroun-attacent</span></li>
+<li><span class="highlight" >backgroun-position</span></li>
+</p>
+</section>
+
+<section class="text" >
+<h4>ব্যাকগ্রাউন্ড কালার</h4>
+<p>
+<span class="highlight" >backgroun-color:</span> প্রোপার্টি দিয়ে আমরা যেকোনো এলিমেন্টের ব্যাকগ্রাউন্ড কালার পরিবর্তন করতে পারি।
+<br>
+এর ভ্যালু হচ্ছে <a href="#" >সিএসএস কালার</a> বা <a href="#" >সিএসএস৩ কালার</a> এর ভ্যালিড যেকোনো কালার।
+<br>
+পুরো পেজের ব্যাকগ্রাউন্ড পরিবর্তন করতে:
+</p>
+
+<div class="example" id="examplex" >
+<div class="examplechild" >
+<p>
+body { <br>
+&nbsp;&nbsp;background-color: yellow; <br>
+}
+</p>
+</div>
+<div class="examplechild" id="bodyyellow" >
+
+</div>
+</div>
+<p>যেকোনো এলিমেন্টের ব্যাকগ্রাউন্ড পরিবর্তন:</p>
+
+<div class="example" id="examplex" >
+<div class="examplechild" >
+<p>
+h1 { <br>
+      background-color: yellow; <br>
+    }<br>
+    p {
+      background-color: pink;<br>
+    } <br>
+    div { <br>
+      background-color: gray; <br>
+      width: 200px; <br>
+      height: 200px; <br>
+    }
+</p>
+</div>
+<div class="examplechild" id="elementbg" style="color=red" >
+bbbb
+</div>
+</div>
+</section>
+
+<section class="text" >
+<h4>ব্যাকগ্রাউন্ড ইমেজ</h4>
+<p>
+<span class="highlight" >backgroun-image</span> প্রোপার্টি যেকোনো এলিমেন্টের ব্যাকগ্রাউন্ডে ছবি দিতে ব্যবহার করা হয়।
+<br>
+এর সঠিক ভ্যালু হচ্ছে <span class="highlight" >url("image.jpg")</span>। সিঙ্গেল কোটেশন বা কোটেশন না দিলেও কাজ করবে। যেমন <span class="highlight" >url('image.jpg')</span> এবং 
+ <span class="highlight" >url(image.jpg)</span>। 
+<br>
+কোটেশন এর ভিতরে যা থাকে তা হচ্ছে ফাইল প্যাথ। অর্থাৎ ছবিটি কোথায় আছে তা বলে দেয়া। 
+</p>
+<div class="example" >
+<p>
+body { <br>
+      background-image: url("images/clouds-bg.jpg"); <br>
+    }
+</p>
+
+<div class="note" >
+<p>
+<strong>নোট:</strong> এমন কোনো ব্যাকগ্রাউন্ড ছবি বা কালার ব্যবহার করা যাবে যা পেজের টেক্সট পড়তে, দেখতে সমস্যা করে। সবসময় সুন্দর এবং ভালো কালার ব্যবহার করতে হবে।
+</p>
+</div>
+</section>
+
+<section class="text" >
+<h4>ব্যাকগ্রাউন্ড ইমেজ রিপিট</h4>
+<p>
+ব্যাকগ্রাউন্ড ইমেজ অটোমেটিক ভাবে রিপিট হতে থাকবে সমান্তরাল/হরাইজন্টাল/(x-অক্ষ) এবং উলম্ব/ভার্টিকাল/(y-অক্ষ) এর দিকে।
+<br>
+নিচের উদাহরণ টি দেখো:
+</p>
+
+<div class="example" id="examplex" >
+<div class="examplechild">
+<p>
+body { <br>
+      background-image: url("images/small-sunflower.png"); <br>
+}
+</p>
+</div>
+
+<div class="examplechild" id="repeat" >
+</div>
+</div>
+
+<p>
+শুধু একদিকে সমান্তরাল/হরাইজন্টাল/(x-অক্ষ) বা উলম্ব/ভার্টিকাল/(y-অক্ষ) দিকে ব্যাকগ্রাউন্ড ইমেজ কে রিপিট করতে <span class="highlight" >background-repeat</span> সিএসএস প্রোপার্টি ব্যবহার করা হয়। <br>
+ <strong>সমান্তরাল/হরাইজন্টাল/(x-অক্ষ)</strong> এর দিকে ইমেজ রিপিট:
+</p>
+
+<div class="example" id="examplex"  >
+<div class="examplechild">
+<p>
+body { <br>
+      background-image: url("images/small-sunflower.png"); <br>
+      background-repeat: repeat-x;
+</p>
+</div>
+<div class="examplechild" id="repeatx"  ></div>
+</div>
+
+<p>
+<strong>উলম্ব/ভার্টিকাল/(y-অক্ষ)</strong> এর দিকে ইমেজ রিপিট:
+</p>
+
+<div class="example" id="examplex"  >
+<div class="examplechild">
+<p>
+body { <br>
+      background-image: url("images/small-sunflower.png"); <br>
+      background-repeat: repeat-y;
+</p>
+</div>
+<div class="examplechild" id="repeaty"  ></div>
+</div>
+
+
+</section>
+</body>
+</html>

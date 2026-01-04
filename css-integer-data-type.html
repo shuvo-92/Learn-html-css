@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Css integer</title>
+
+    <style type="text/css" media="all">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: kalpurush, serif;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: kalpurush;
+            src: url("kalpurush.ttf");
+        }
+
+        section.text {
+            width: 96%;
+            height: auto;
+            margin: 20px auto;
+            padding: 8px;
+            border: 1px solid silver;
+            border-radius: 10px;
+            background-color: rgba(109, 200, 100, 0.4);
+            box-shadow: 0px 0px 6px rgba(25, 0, 0, 0.3);
+
+
+
+        }
+
+        /*color ---- #E2E6D9 */
+
+        p {
+            font-size: 14px;
+            line-height: 1.3rem;
+        }
+
+        span.highlight {
+            padding: 0px 3px;
+            background-color: #ff9fff;
+            border-radius: 4px;
+        }
+
+
+        div.box {
+            width: 100%;
+            height: auto;
+            margin: 2px auto 20px;
+            padding: 6px 10px;
+            padding-left: 30px;
+            border-radius: 12px;
+            background-color: #282C34;
+            color: #D2EEE1;
+            font-size: 10px;
+            overflow: visible;
+        }
+
+
+        table {
+            width: 100%;
+            height: auto;
+            margin: 10px auto;
+            background-color: lightblue;
+            border-collapse: collapse;
+            t
+        }
+
+        table tr td {
+            padding: 1px 1px;
+            text-align: center;
+            border: 1px solid green;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="text">
+        <h3>সিএসএস &lt;integer&gt;</h3>
+        <p>
+            &lt;integer&gt; ডাটা টাইপ হলো বিশেষ ধরনের &lt;number&gt; নাম্বার টাইপ যা প্রকাশ করে একটি পূর্ণসংখ্যা, যেটি
+            পজিটিভ বা নেগেটিভ হতে পারে। ইন্টেজার (Integer) গুলো ব্যবহৃত হয় সংখ্যামূলক বা ভ্যালু সংখ্যার হবে এমন সিএসএস
+            প্রোপার্টিতে, যেমন:
+            <span class="highlight">column-count</span>,
+            <span class="highlight">counter-increment</span>,
+            <span class="highlight">grid-column</span>, <span class="highlight">grid-row</span>, এবং <span
+                class="highlight">z-index</span>।
+            <br>
+            ইন্টেজার ডাটা টাইপ এক বা একাধিক ডেসিমাল ডিজিট বহন করে। যেগুলো ০ থেকে ৯ দিয়ে। সাথে + বা - চিহ্ন ব্যবহার করা
+            যায়।
+        </p>
+    </section>
+
+
+
+    <section class="text">
+        <h4>ভ্যালিড ইন্টেজারস</h4>
+        <div class="box">
+            <p>
+
+                12 পজিটিভ ইন্টেজার (কোনো অপারেটর ছাড়াই পজিটিভ)। <br />
+                +123 পজিটিভ ইন্টেজার (অপারেটর সহ পজিটিভ)। <br />
+                -456 নেগেটিভ ইন্টেজার। <br />
+                0 শূন্য। <br>
+                +0 শূন্য + চিহ্নসহ। <br />
+                -0 শূন্য - চিহ্নসহ।
+
+            </p>
+
+
+        </div>
+
+        <h4>ইনভ্যালিড ইন্টেজারস</h4>
+        <div class="box">
+            <p>
+
+                12.0 এটা একটা &lt;number&gt; নাম্বার, &lt;integer&gt; ইন্টেজার নয়। যদিও ইন্টেজার প্রকাশ করে। <br />
+                12. দশমিক মান অগ্রহণযোগ্য। <br />
+                +---12 মাত্র একটা অপারেটর গ্রহণযোগ্য (+/-)। <br />
+                ten অক্ষর/বর্ণ অগ্রহণযোগ্য। <br />
+                _5 বিশেষ চিহ্ন অগ্রহণযোগ্য। <br />
+                3e4 সায়েন্টিফিক/বৈজ্ঞানিক সংখ্যা এর রূপ অগ্রহণযোগ্য। <br />
+            </p>
+        </div>
+    </section>
+
+
+
+
+    <section class="text">
+        <table class="">
+            <tr>
+                <td>12</td>
+                <td>পজিটিভ ইন্টেজার (কোনো অপারেটর ছাড়াই পজিটিভ)।</td>
+            </tr>
+            <tr>
+                <td>+12</td>
+                <td>পজিটিভ ইন্টেজার (অপারেটর সহ পজিটিভ)।</td>
+            </tr>
+            <tr>
+                <td>-456</td>
+                <td>নেগেটিভ ইন্টেজার।</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>শূন্য।</td>
+            </tr>
+            <tr>
+                <td>+0</td>
+                <td> শূন্য + চিহ্নসহ। </td>
+            </tr>
+            <tr>
+                <td>-0</td>
+                <td>শূন্য - চিহ্নসহ।
+                </td>
+            </tr>
+
+
+
+
+        </table>
+    </section>
+</body>
+
+</html>

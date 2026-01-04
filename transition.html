@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+
+	<style type="text/css">
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: silver;
+		}
+
+		div:hover {
+			width: 340px;
+			background-color: blue;
+			height: 320px;
+			border-radius: 50%;
+			;
+		}
+
+		.with {
+			transition-property: width, height, background;
+			transition-duration: 5s;
+			transition-timing-function: ease;
+			transition-delay: 9ms;
+
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<p>without transition</p>
+	<div class="without"></div>
+	<br>
+	<br>
+	<p>with transition</p>
+	<div class="with"></div>
+
+
+
+</body>
+
+</html>

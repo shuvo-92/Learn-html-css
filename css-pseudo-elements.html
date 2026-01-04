@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Css pseudoelements</title>
+<style type="text/css" media="all">
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:kalpurush, serif;
+}
+
+@font-face{
+font-family:kalpurush;
+src: url("kalpurush.ttf");
+}
+
+p {
+font-size:14px;
+line-height:1.3rem;
+
+}
+
+section.text {
+width:96%;
+height:auto;
+margin:20px auto;
+padding:10px;
+border:1px solid silver;
+border-radius:6px;
+background-color:rgba(178, 69, 139, 0.2);
+box-shadow:0px 2px 7px rgba(0, 20, 0, 0.1);
+
+
+}
+
+section div.method {
+width:100%;
+height:auto;
+margin:;
+padding:4px 10px;
+border-radius:8px;
+background-color:whitesmoke;
+
+
+
+}
+
+
+li{
+list-style-type:disc;
+font-size:14px;
+}
+
+span.highlight {
+padding:0px 4px;
+border-radius:4px;
+background-color:rgba(28, 86, 62, 0.2);
+
+}
+
+
+
+div.example {
+width:100%;
+height:auto;
+margin:8px auto;
+padding:4px 10px;
+border-radius:2px;
+box-shadow:0px 2px 8px rgba(29, 7, 0, 0.2);
+border:1px solid rgba(0, 28, 0, 0.2);
+
+
+}
+
+div.example > p#selection::selection {
+color:red;
+background-color:silver;
+}
+
+section > p > span#note {
+color:red;
+font-weight:bolder;
+}
+
+</style>
+</head>
+<body>
+
+<section class="text" >
+<h4>সিএসএস স্যুডো এলিমেন্টস | Css pseudo elements</h4>
+<p>
+সিএসএস স্যুডো এলিমেন্ট হলো একটি কী-ওয়ার্ড। যার মাধ্যমে একটি সিলেক্টর ব্যবহার করে কোনো এলিমেন্টের নির্দিষ্ট অংশ স্টাইল করা যায়।
+
+</p>
+<br>
+<h4>Syntax কিভাবে ব্যবহার হয়: </h4>
+<div class="method" >
+<p>
+selector::pseudo-element { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;property:value; <br>
+}
+</p>
+</div>
+
+<br>
+
+<h5>সিএসএস-এ কি কি ধরনের স্যুডো এলিমেন্ট ব্যবহার নিচে তা জানবো:</h5>
+<li><span class="highlight" >::after</span></li>
+<li><span class="highlight" >::before</span></li>
+<li><span class="highlight" >::first-letter</span></li>
+<li><span class="highlight" >::first-line</span></li>
+<li><span class="highlight" >::selection</span></li>
+
+</section>
+
+<section class="text" >
+<h4>::after স্যুডো এলিমেন্ট</h4>
+<p>
+<span class="highlight" >::after</span>
+স্যুডো এলিমেন্ট এমন একটি স্যুডো এলিমেন্ট তৈরি করে যেটি কোনো এলিমেন্টের last child। মানে কোনো এলিমেন্টের একদম শেষের দিকে ডিজাইন করতে বা এর জন্য ব্যবহার হয়। <br><br>
+ সাধারণত নির্দিষ্ট কোনো এলিমেন্টের সাজসজ্জা দিতে <span class="highlight" >content</span> প্রোপার্টি দ্বারা এটি ব্যবহার করা হয়।<br>
+ যেগুলো ডিফল্টভাবে একটি ইনলাইন এলিমেন্ট তৈরি করে। 
+ </p>
+ 
+ <div class="example" >
+ <p>
+   .true::after { <br>
+     content: "-> True"; <br>
+     color: green; <br>
+   } <br> <br>
+   .false::after { <br>
+     content: "-> False"; <br>
+     color: red; <br>
+   }
+ </p>
+ </div>
+</section>
+
+<section class="text" >
+<h4>::before স্যুডো এলিমেন্ট</h4>
+<p>
+<span class="highlight" >::before</span>
+স্যুডো এলিমেন্ট এমন একটি স্যুডো এলিমেন্ট তৈরি করে যেটি কোনো এলিমেন্টের first child। মানে কোনো এলিমেন্টের একদম প্রথম দিকে ডিজাইন করতে বা এর জন্য ব্যবহার হয়। <br><br>
+ সাধারণত নির্দিষ্ট কোনো এলিমেন্টের সাজসজ্জা দিতে <span class="highlight" >content</span> প্রোপার্টি দ্বারা এটি ব্যবহার করা হয়।<br>
+ যেগুলো ডিফল্টভাবে একটি ইনলাইন এলিমেন্ট তৈরি করে। 
+ </p>
+ 
+ <div class="example" >
+ <p>
+   .true::before { <br>
+     content: "-> True"; <br>
+     color: green; <br>
+   } <br> <br>
+   .false::before { <br>
+     content: "-> False"; <br>
+     color: red; <br>
+   }
+ </p>
+ </div>
+
+</section>
+
+<section class="text" >
+<h4>::first-letter স্যুডো এলিমেন্ট</h4>
+<p>
+<span class="highlight" >::first-letter</span> স্যুডো এলিমেন্ট টি নির্দিষ্ট ব্লক লেভেল এলিমেন্টের প্রথম লাইনের প্রথম অক্ষরের স্টাইল দিতে ব্যবহার করা হয়।
+</p>
+<bul>
+<p>যেসকল সিএসএস প্রোপার্টি তে ব্যবহার করা যায়।</p>
+<li>সকল <span class="highlight" >font</span> প্রোপার্টি। </li>
+<li>সকল <span class="highlight" >background</span> প্রোপার্টি। </li>
+<li>সকল <span class="highlight" >margin</span> প্রোপার্টি। </li>
+<li>সকল <span class="highlight" >padding</span> প্রোপার্টি। </li>
+<li>সকল <span class="highlight" >border</span> প্রোপার্টি। </li>
+<li>সকল <span class="highlight" >color</span> প্রোপার্টি। </li>
+<li>
+<span class="highlight" >word-spacing</span>
+<span class="highlight" >letter-spacing</span>
+<span class="highlight" >text-transform</span>
+<span class="highlight" >line-height</span>
+<span class="highlight" >text-shadow</span>
+<span class="highlight" >text-decoration</span>
+<span class="highlight" >text-decoration-color</span>
+<span class="highlight" >text-decoration-line</span>
+<span class="highlight" >text-decoration-style</span>
+<span class="highlight" >vertical-align</span>
+প্রোপার্টি।। 
+
+</li>
+
+
+<div class="example" >
+<p>
+p::first-letter { <br>
+      text-decoration: overline; <br>
+      font-size: 250%; <br>
+      color: red; <br>
+    }
+</p>
+</div>
+</section>
+
+<section class="text" >
+<h4>::first-line স্যুডো এলিমেন্ট</h4>
+<p>
+<span class="highlight" >::first-line</span> স্যুডো এলিমেন্ট টি নির্দিষ্ট ব্লক লেভেল এলিমেন্টের প্রথম লাইন কে স্টাইল দিতে ব্যবহার করা হয়।
+</p>
+<bul>
+<p>যেসকল সিএসএস প্রোপার্টি তে ব্যবহার করা যায়।</p>
+<li>সকল <span class="highlight" >font</span> প্রোপার্টি। </li>
+<li>সকল <span class="highlight" >background</span> প্রোপার্টি। </li>
+<li><span class="highlight" >color</span> প্রোপার্টি। </li>
+<li>
+<span class="highlight" >word-spacing</span>
+<span class="highlight" >letter-spacing</span>
+<span class="highlight" >text-transform</span>
+<span class="highlight" >line-height</span>
+<span class="highlight" >text-shadow</span>
+<span class="highlight" >text-decoration</span>
+<span class="highlight" >text-decoration-color</span>
+<span class="highlight" >text-decoration-line</span>
+<span class="highlight" >text-decoration-style</span>
+<span class="highlight" >vertical-align</span>
+প্রোপার্টি।। 
+
+</li>
+
+
+<div class="example" >
+<p>
+p::first-letter { <br>
+      color: #f8f9f9;<br>
+      background-color: #173459; <br>
+    }
+</p>
+</div>
+</section>
+
+
+
+<section class="text" >
+<h4>::selection স্যুডো এলিমেন্ট</h4>
+<p>
+ওয়েবাসাইট, লেখায়, ডকুমেন্টে ব্যবহাকারী যখন কোনো কিছু সিলেক্ট করে তখন সিলেক্ট করা অংশ আমরা যেভাবে দেখাতে চাই বা আমরা যেরকম স্টাইল দিতে চাই তা এই <span class="highlight" >::selection</span> স্যুডো এলিমেন্টের মাধ্যমে করা হয়।
+</p>
+<br>
+<p>যেসকল সিএসএস প্রোপার্টি তে ব্যবহার করা যায়:</p>
+<li><span class="highlight" >color</span></li>
+<li><span class="highlight" >caret-color</span></li>
+<li><span class="highlight" >background-color</span></li>
+<li><span class="highlight" >cursor</span></li>
+<li><span class="highlight" >outline</span> প্রোপার্টি গুলো।</li>
+<li><span class="highlight" >text-decoration</span> এবং এর অধিভুক্ত সব প্রোপার্টি।</li>
+<li><span class="highlight" >text-shadow</span></li>
+<li><span class="highlight" >text-emphasis-color</span></li>
+
+
+<div class="example" >
+<p id="selection" >
+p::selection { <br>
+      color: red; <br>
+      background-color: silver; //লেখাটি সিলেক্ট করে দেখো কেমন হয়। <br> 
+    }
+</p>
+</div>
+<p><span id="note" >Note: এই ডেমো IOS এ কাজ করবে না।</span> </p>
+</section>
+
+
+</body>
+</html>

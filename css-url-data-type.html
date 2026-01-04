@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>css-url</title>
+
+<style type="text/css" media="all">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:kalpurush, serif;
+
+}
+
+@font-face{
+font-family:kalpurush;
+src:url("kalpurush.ttf");
+}
+
+section.text {
+width:96%;
+height:auto;
+margin:20px auto;
+padding:8px;
+border:1px solid silver;
+border-radius:10px;
+background-color:#f2fffc;
+box-shadow:1px 2px 4px rgba(100, 0, 0, 0.2);
+}
+
+span.highlight {
+padding:0px 3px;
+background-color:rgba(10,200,30,0.4);
+border-radius:4px;
+}
+
+section a{
+text-decoration:none;
+font-weight:bold;
+color:#262626;
+}
+
+section a:hover {
+font-style:italic;
+font-weight:bolder;
+color:red;
+}
+
+p {
+font-size:14px;
+line-height:1.3rem;
+}
+
+div.example {
+width:auto;
+height:auto;
+margin:6px auto;
+padding:4px 10px;
+background-color:#f2f2f9;
+box-shadow: 0 4px 3px rgba(0, 3, 0, 0.1);
+border:1px solid silver;
+border-radius:12px;
+overflow:scroll;
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="text" >
+<h4>সিএসএস URL</h4>
+<p>সিএসএস এ
+<span class="highlight" >&lt;URL&gt;</span>
+বলতে বোঝায় কোনো কিছুর রিসোর্স। যেমন কোনো ইমেজ, ফন্ট এদের রিসোর্স ফাইল বোঝাতে ইউআরএল ব্যবহার হয়। ইউআরএল প্রচুর সিএসএস প্রোপার্টিতে ব্যবহার করা হয়। যেমন 
+<span class="highlight" >background-image</span>,
+<span class="highlight" >cusor</span>,
+<span class="highlight" >list-style</span>.
+
+
+</p>
+
+<p>
+<span class="highlight" >&lt;url&gt;</span> ডাটা টাইপ ব্যবহার করা হয় <span class="highlight" >url()</span> ফাংশন দিয়ে। প্রথম বন্ধনীর ভিতরে কোটেশন ছাড়া, অথবা সিঙ্গেল/ডাবল কোটেশন দিয়ে মার্ক করা থাকে। <br><br>
+ইউআরএল সম্পর্কে <a href="input-color.html" >এইচটিএমএল ওয়েব অ্যাপে </a>বিস্তারিত জানতে পারবে।
+</p>
+</section>
+
+<section class="text" >
+<h4>নিচে কিছু উদাহরণ দেয়া হলো:</h4>
+ <div class="example" >
+ <p>
+.header { <br>
+&nbsp;&nbsp;&nbsp; background: url('backimage.jpg');<br>
+}
+ <br>
+ //এখানে সিঙ্গেল কোটেশন ব্যবহার করা হয়েছে।
+</p>
+ </div>
+ 
+ <div class="example" >
+ <p>
+ ul { <br>
+ &nbsp; list-style: square url("bullet.png"); <br>
+ }
+ 
+ <br>
+ //এখানে ডাবল কোটেশন ব্যবহার করা হয়েছে।
+</p>
+ </div>
+ 
+ <div class="example" >
+ <p>
+ ul { <br>
+ &nbsp; list-style: square url(bullet.png); <br>
+ }
+ </br>
+ // এখানে কোনো কোটেশন মার্ক ব্যবহার হয় নাই।
+ 
+ </p>
+ </div>
+
+</section>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Input color</title>
+
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: serif;
+    }
+
+    body{
+      background-color: beige;
+    }
+
+    input {
+      margin: 30px auto;
+      padding: 10px;
+      width: 430px;
+      height: 500px;
+      border: 1px solid rgb(240, 246, 222);
+      border-radius: 10px;
+      box-shadow: 2px 3px 8px rgba(64, 75, 48, 0.236);
+      display: block;
+    }
+
+    button {
+      width: 100px;
+      height: auto;
+      margin: auto;
+      padding: 8px;
+      display: block;
+      outline: none;
+      border: 2px solid green;
+      border-radius: 12px;
+      box-shadow: 1px 1px 5px -1px red;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <input type="color" id="demo" />
+  <br />
+  <button onclick="getValue()"> কালার কোড</button>
+
+  <script type="text/javascript">
+    function getValue() {
+      alert(document.getElementById('demo').value);
+    }
+  </script>
+</body>
+
+</html>

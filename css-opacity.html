@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Css syntax & selector</title>
+<style type="text/css" media="all">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: kalpurush, serif;
+}
+
+@font-face {
+    font-family: kalpurush;
+    src: url("kalpurush.ttf");
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.3rem;
+}
+
+section.text {
+    width: 96%;
+    height: auto;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid silver;
+    border-radius: 6px;
+    background-color: rgba(18, 169, 139, 0.2);
+    box-shadow: 0px 2px 7px rgba(0, 20, 0, 0.1);
+}
+
+span.highlight {
+mnargin:0px;
+padding:0px 4px;
+border-radius:2px;
+background-color:rgba(182, 159, 120, 0.6);
+}
+
+
+div.example {
+width:100%;
+height:auto;
+margin:4px auto;
+padding:4px 10px;
+border:;
+border-radius:;
+color:#f8f9e9;
+background-color:#173460;
+line-height:1px;
+
+}
+div.example > p{
+libne-height:18px;
+}b
+
+
+
+</style>
+</head>
+
+<body>
+<section class="text" >
+<h4>সিএসএস Opacity</h4>
+<p>
+<span class="highlight" >Opacity</span>
+সিএসএস প্রোপার্টি কোনো এলিমেন্টের অপাসিটি কমাতে বাড়াতে ব্যবহার হয়। <br>
+অপাসিটি মানে হচ্ছে কোনো এলিমেন্ট কতটা ঝাপসা বা গাঢ় দেখা যাবে তা। <br>
+আমরা বলতে পারি ট্রান্সপারেন্সির ঠিক বিপরীত হলো অপাসিটি। <br> <br>
+এর ভ্যালু হচ্ছে সংখ্যা। যার মান ০.০ থেকে ১ পর্যন্ত। <br>
+ভ্যালু ০ দিলে এলিমেন্ট পুরো ট্রান্সপারেন্ট বা অদৃশ্য দেখাবে।
+</p>
+
+
+<div class="example" >
+<p>
+div { <br>
+      opacity: 0; <br>
+      color: #f8f9f9; <br>
+      background-color: #173459; <br>
+      padding: 10px; <br>
+    }
+
+
+</p>
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+</body>
+</html>
